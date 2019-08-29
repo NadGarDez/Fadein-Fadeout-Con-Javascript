@@ -1,0 +1,51 @@
+<!DOOCTIPE html>
+<html lang ="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="STYLESHEET" type="text/css" href="">
+		<title></title>
+	</head>
+	<body>
+	
+	<style>
+		*{
+		margin:0px;
+		padding:0px;
+		text-align:center;
+		}
+		.imagen{
+			width:80%;
+			height:80%;
+		}
+	</style>
+	<h2>Fade out</h2>
+	<img class="imagen" id="imagen" src="paisaje.jpg"><br>
+	
+	<h2>Fade in</h2>
+	<img class="imagen" id="imagen2" src="paisaje.jpg"><br>
+	
+	<script>
+		var opacidad=1;
+		var opacidad2=0;
+		setInterval(desaparecer,150);
+		setInterval(aparecer,150);
+		function desaparecer(){
+			var elemento= document.getElementById("imagen");
+			opacidad=opacidad-0.1;
+			elemento.style.opacity=opacidad;
+			if(opacidad<0){
+				opacidad=1;
+			}
+		}
+		
+		function aparecer(){
+			var elemento= document.getElementById("imagen2");
+			opacidad2=opacidad2+0.1;
+			elemento.style.opacity=opacidad2;
+			if(opacidad2>1){
+				opacidad2=0;
+			}
+		}
+	</script>
+	</body>
+<html>
